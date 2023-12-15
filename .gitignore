@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+*.tlog
+*.pdb
+*.log
+*.iobj
+*.ipdb
+*.recipe
+*.ilk
+*.idb
+*.vsidx
+.vs/Config/v17/.suo
+*.ipch
+*.db
