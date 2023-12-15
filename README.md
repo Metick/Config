@@ -21,17 +21,19 @@ settings.load("Default.conf");
 ```
 ## Usage Examples
 
-## Accessing Config Values
+### Accessing Config Values
 ```
 std::cout << "Float: " << settings.a_float_value << std::endl;
 ```
-## Modifying Config Values
+
+### Modifying Config Values
 To edit the config, You have to pass through the value as 'pointer'
 For example in my Main.cpp:
 ```
 modify_struct(&settings.test_struct);
 ```
-## Incorrect Way to Edit Config Values
+
+### Incorrect Way to Edit Config Values
 ```
 // This won't work as intended
 settings.a_float_value = 1337.f;
@@ -39,6 +41,7 @@ std::cout << "Attempting to edit the value wrong" << std::endl;
 std::cout << "Float: " << settings.a_float_value << std::endl;
 std::cout << "Value remains the same, as it's not edited through a pointer." << std::endl;
 ```
+
 ### Correct Ways to Edit Config Values
 ```
 // Use Set function to edit the value
@@ -46,6 +49,7 @@ settings.Set(&settings.a_float_value, 1337.f);
 std::cout << "Now it will have a new value" << std::endl;
 std::cout << "Float: " << settings.a_float_value << std::endl;
 ```
+
 ### Using Custom Function
 ```
 void Test(float* value)
@@ -57,6 +61,7 @@ void Test(float* value)
 Test(&settings.a_float_value);
 std::cout << "Float: " << settings.a_float_value << std::endl;
 ```
+
 ## Saving Config
 After making changes, save the configuration:
 ```
