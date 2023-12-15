@@ -7,7 +7,8 @@ To use the Config System in your project, follow these steps:
 
 Include the Include folder in your project:
 
-#include "Include/config.h
+#include "Include/config.h"
+
 There is already a instance created inside config.h which you can access as `settings`.
 
 ## Create a default configuration file and load it:
